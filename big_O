@@ -1,0 +1,141 @@
+big O
+Landua Notation
+It describes the limiting behaviour of a function, when the argument tends towards a particular value or infinity
+It is used to classify algorithms by how they respond to changes in input size
+
+
+Big Omega notation
+It describes the limiting behaviour of a function, when the argument tends towards a particular value or infinity
+
+It has two distinct definitions
+
+According to number theory, it means that an f(n) function is not dominated by a g(n) function asymptotically 
+
+According to complex theory: it means that an f(n) function is bounded below by an g(n) function asymptotically 
+
+asymptotic == The term asymptotic means approaching a value or curve arbitrarily closely (i.e., as some sort of limit is taken). A line or curve that is asymptotic to given curve is called the asymptote of .
+
+
+Big theta notation 
+It describes the limiting behaviour of a function, when the argument tends towards a particular value or infinity
+
+An F(n) function is bounded by both above and below by a g(n) function: so both f(n) = O(g(n)) and f(n) = delta(g(n)) are true
+
+
+example of constant time complexity
+
+swapping two numbers or deciding whether a number is odd or even
+
+function swapNumber(num1, num2):
+	temp1 = num1
+	num1 = num2
+	num2 = temp1
+end function
+
+Example of Logarithmic time complexity
+
+finding the maximum or minimum number in a sorted array 
+
+Linear time Complexity
+
+finding the maximum value in an array of numbers
+
+function findMax(a[]):
+	max = a[0]
+
+	for(i=0;i<arr.length;i++):
+		if max > a[i]
+			max = a[i]
+	return max
+end function
+
+	if we have three for cycles within one function its going to have O(N)^3
+
+Linearithmic time complexity
+
+	mergesort, quicksort, heapsort
+	divide and conquer method
+
+
+Heuristics
+There are some problems where the exact solution might take too long to solve, so instead of finding the exact solutions for problems with exponential or factorial time complexities we use this approach.
+
+Simulated annealing, genetic algorithms
+
+
+Complexity Classes
+
+P = polynomial
+	precise definition: all the decision problems that can be solved with deterministic Turing-machines using polynomial amount of computational time. 
+	These problems are efficiently solvable, but not all of these problems have a practical solution. All sorting algos
+NP = nondeterministic polynomial 
+	If we have a certain solution for the problem, we can verify this problem in polynomial time. 
+	Whether p = np 
+
+NP Complete
+
+	The hardes problems in NP
+	??? karp reduction ???
+	??? graph coloring ???
+	??? Hamiltolian path problem ???
+	Most important complexity class
+
+NP HARD
+	We can convert a NP hard algo into a np complete problem
+	??? halting problem ???
+	This is a good example when we would want to use heuristics
+
+
+??? traveling sales problem ????
+
+
+DATA STRUCTURES
+
+
+LINKED LIST
+
+Each node is is composed of data and a reference to the next node in the sequence. Simple and very common data structure! 
+
+They can be used to implement several other common data types. stacks, queues
+
+The principal benefit of a linked list over a conventional array is that the list elements easily be inserted or removed without reallocation or reorganization of the entire structure because the data items need not be stored in memory or on disk in one block 
+
+an array has to be declared in the source code, before compiling and running the code. 
+
+On the other hand, simple linked list by themselves do not allow random access to data. 
+
+Many basic operations such as obtaining the last node on the list, or finding a node that contains the given data, or locating the place where a new node should be inserted -- may require sequential scanning of most or all of the list elements 
+
+Some of the times that you want to use linked list instead of an array
+
+	use linked list if you want to insert/remove elements at the beggining 
+
+	use linked list if the size is changing frequently.. otherwise use arrays
+
+	use arrays if you need random access: it can be sone very quickly 
+
+
+ADVANTAGES OF LINKED LIST
+
+	linked list are dynamic data structures
+	it can allocate the memory usage in run time
+	its easier for a linked list to grow organically, An array size needs to be known ahead of time, or recreated when it grows 
+
+DISADVANTAGES OF LINKED LIST
+
+	waste memory because of the references 
+	nodes in a linked list must be accessed sequentially, array items can be reached by index
+	dificulties arise when trying to transverse an array backwards, single linked list are extremly difficult to transverse backwards
+	doubly linked list can potentially solve this problem, but then more memory is wasted adding a backwards pointer
+
+
+WHEN INSERTING INTO A LIST
+
+	you are usually going to insert to the beggining of the list this would give us a time complexity of o(1)
+	At the end of the list its going to be linear time complexity o(n)
+
+	
+
+
+
+
